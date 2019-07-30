@@ -21,7 +21,7 @@ $(document).ready(function () {
 
     function getOneClub(name) {
 
-        $.get("/api/clubs/:" + name,function(data){
+        $.get("/api/clubs/:" + name, function (data) {
             var rowsToAdd = [];
             console.log(data)
             for (var i = 0; i < data.length; i++) {
@@ -45,14 +45,14 @@ $(document).ready(function () {
     function createClubRow(clubData) {
         // var newTr = $("<tr style='width:200px'>");
         // newTr.data("club", clubData);
-        
+
         var newCard = `
             <div class="card w-100 p-3">
             <div class="card-body">
               <h5 class="card-title">${clubData.clubName}</h5>
               <p class="card-text">${clubData.clubDescription}</p>
-              <a href="#" class="btn btn-info btn-sm">Button</a>
-              <button><a style='cursor:pointer;color:red' class='delete-club'>Delete Club</a></button>
+              <a href="#" class="btn btn-info btn-sm">Club Page</a>
+              <a href="#" class="delete-club btn btn-danger btn-sm" data-id= ${clubData.id}>Delete Club</a>
             </div>
           </div>  
         `
