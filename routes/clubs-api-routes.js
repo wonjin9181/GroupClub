@@ -9,6 +9,8 @@ module.exports = function(app) {
     });
   });
 
+
+
   // Create a new example
   app.post("/api/clubs", function(req, res) {
     db.Clubs.create(req.body)
@@ -17,6 +19,8 @@ module.exports = function(app) {
     });
   });
 
+
+  
   // Delete an example by id
   app.delete("/api/clubs/:id", function(req, res) {
     db.clubs.destroy({ where: { id: req.params.id } })
