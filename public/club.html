@@ -3,37 +3,56 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Which Club</title>
+    <title>Make a Club</title>
     <!-- Latest compiled and minified CSS & JS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="./club.js"></script>
+    <script src="./makeClub.js"></script>
 </head>
 
 <body>
-    <form>
-        <div class="form-group">
-            <label for="clubName">Club Name</label>
-            <input type="input" class="form-control" id="clubName" placeholder="Enter club name...">
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-2 col-sm-2">
+                <a class="btn btn-light" href="/blog">Go to Blog</a>
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <a class="btn btn-light" href="/cms">New Post</a>
+            </div>
         </div>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="author-container">
+                    <h1>Make a Club</h1>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Club Name</th>
+                                <th>Club Maker</th>
+                                <th>Club Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="form-row">
+                                <form id="club-form">
+                                    <td colspan="4">
+                                        <input placeholder="Enter a name" id="club-name" type="text" />
+                                    </td>
+                                    <td><button type="submit" class="btn btn-success">Create Club</button>
+                                    </td>
+                                </form>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        </d>
+        <!-- Custom Script -->
+        <script src="js/author.js" type="text/javascript"></script>
 
-        <div class="form-group">
-            <label for="clubMaker">Club Maker</label>
-            <input type="input" class="form-control" id="clubMaker" placeholder="Maker's name...">
-        </div>
-
-        <div class="form-group">
-            <label for="clubLocation">Club Location</label>
-            <input type="input" class="form-control" id="clubLocation" placeholder="Enter club location...">
-        </div>
-        <div class="form-group">
-            <label for="clubDescription">Club Description</label>
-            <textarea class="form-control" id="clubDescription" rows="5" placeholder="Tell us about this club..."></textarea>
-          </div>
-    
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <a href="/public/index.html" class="btn btn-secondary btn-disabled" role="button" aria-disabled="true">Link</a>
-    </form>
 </body>
+
+</html>
