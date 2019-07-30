@@ -5,6 +5,21 @@ module.exports = function(app) {
   app.get("/api/clubs", function(req, res) {
     db.Clubs.findAll({})
     .then(function(dbClubs) {
+   
+      res.json(dbClubs);
+      
+    });
+  });
+
+
+  app.get("/api/clubs/:name", function(req, res) {
+
+    db.Clubs.findAll({
+      where:{
+        clubName: req.params.name
+      }
+    })
+    .then(function(dbClubs) {
       res.json(dbClubs);
     });
   });
