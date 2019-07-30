@@ -1,67 +1,79 @@
 $(document).ready(function () {
 
-    $("#makeClub").on("click", function () {
-        window.location.href = "/makeClub"
-    })
+
+
+    var clubList = $("#clubs")
+
+    getClubs()
+
+
 
     $("#search").on("click", function () {
-        var id = $("searchItem").val().trim();
 
-        getClubs(id)
+        var name = $("#searchTerm").val().trim();
+
+        console.log(name)
+
+        getOneClub(name)
     })
 
 
 
-    function getClubs(id) {
+    function getOneClub(name) {
 
-        if(id){
-            $.ajax({
-            method: "GET",
-            url: "/api/authors/" + id
+        $.get("/api/clubs/:" + name, function (data) {
+            var rowsToAdd = [];
+            console.log(data)
+            for (var i = 0; i < data.length; i++) {
+                rowsToAdd.push(createClubRow(data[i]));
+            }
+            renderClubList(rowsToAdd);
         })
-        .then(function (data) {
-                for (var i = 0; i < data.length; i++) {
-                    $("#clubs") = `
-                    <div class="card w-75">
-                    <div class="card-body">
-                      <h5 class="card-title">${data[i].clubName}</h5>
-                      <p class="card-text">${data[i].clubDescription}</p>
-                      <a href="#" class="btn btn-primary">Button</a>
-                    </div>
-                  </div>  
-                `
-                }
-                
-            })
-        }
-        else if(!id) {
-            $.ajax({
-                method:"GET",
-                url: "/api/authors"
-            })
-            .then(function(data){
-                for (var i = 0; i < data.length; i++) {
-                    $("#clubs") = `
-                    <div class="card w-75">
-                    <div class="card-body">
-                      <h5 class="card-title">${data[i].clubName}</h5>
-                      <p class="card-text">${data[i].clubDescription}</p>
-                      <a href="#" class="btn btn-primary">Button</a>
-                    </div>
-                  </div>  
-                `
-
-                }
-            })
-
-        }
     }
 
+    function getClubs() {
+        $.get("/api/clubs", function (data) {
+            var rowsToAdd = [];
+            console.log(data)
+            for (var i = 0; i < data.length; i++) {
+                rowsToAdd.push(createClubRow(data[i]));
+            }
+            renderClubList(rowsToAdd);
+        });
+    }
 
+    function createClubRow(clubData) {
+        // var newTr = $("<tr style='width:200px'>");
+        // newTr.data("club", clubData);
 
+        var newCard = `
+            <div class="card w-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">${clubData.clubName}</h5>
+              <p class="card-text">${clubData.clubDescription}</p>
+              <a href="#" class="btn btn-info btn-sm">Club Page</a>
+              <a href="#" class="delete-club btn btn-danger btn-sm" data-id= ${clubData.id}>Delete Club</a>
+            </div>
+          </div>  
+        `
+        // newTr.append(newCard);
+        // newTr.append("<td><a href='/blog?club_id=" + clubData.id + "'>Go to Posts</a></td>");
+        // newTr.append("<td><a href='/cms?club_id=" + clubData.id + "'>Create a Post</a></td>");
+        // newTr.append("");
+        return newCard;
+    }
 
-
-
+    function renderClubList(rows) {
+        clubList.children().not(":last").remove();
+        // clubContainer.children(".alert").remove();
+        if (rows.length) {
+            console.log(rows);
+            clubList.prepend(rows);
+        }
+        else {
+            renderEmpty();
+        }
+    }
 
 
 });
