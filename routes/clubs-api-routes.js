@@ -38,7 +38,8 @@ module.exports = function(app) {
   
   // Delete an example by id
   app.delete("/api/clubs/:id", function(req, res) {
-    db.clubs.destroy({ where: { id: req.params.id } })
+   console.log("------------", req.params.id)
+    db.Clubs.destroy({ where: { id: req.params.id } })
     .then(function(dbClubs) {
       res.json(dbClubs);
     });
