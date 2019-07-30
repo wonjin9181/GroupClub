@@ -15,6 +15,13 @@ module.exports = function (sequelize, DataTypes) {
         len: [1, 50]
       }
     },
+    clubDescription: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1,100]
+      }
+    },
     clubLocation: {
       type: DataTypes.STRING,
       allowNull: true
