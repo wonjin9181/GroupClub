@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
 
@@ -22,8 +22,9 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
+require("./routes/post-api-routes")(app);
 require("./routes/htmlRoutes")(app);
+require("./routes/clubs-api-routes")(app)
 
 var syncOptions = { force: false };
 

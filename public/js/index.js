@@ -14,14 +14,14 @@ $(document).ready(function () {
 
     function getClubs(id) {
 
-        if(id){
+        if (id) {
             $.ajax({
-            method: "GET",
-            url: "/api/authors/" + id
-        })
-        .then(function (data) {
-                for (var i = 0; i < data.length; i++) {
-                    $("#clubs") = `
+                method: "GET",
+                url: "/api/authors/" + id
+            })
+                .then(function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        var newCard = `
                     <div class="card w-75">
                     <div class="card-body">
                       <h5 class="card-title">${data[i].clubName}</h5>
@@ -30,18 +30,19 @@ $(document).ready(function () {
                     </div>
                   </div>  
                 `
-                }
-                
-            })
+                        $("#clubs").append(newCard)
+                    }
+
+                })
         }
-        else if(!id) {
+        else {
             $.ajax({
-                method:"GET",
+                method: "GET",
                 url: "/api/authors"
             })
-            .then(function(data){
-                for (var i = 0; i < data.length; i++) {
-                    $("#clubs") = `
+                .then(function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        var newCard = `
                     <div class="card w-75">
                     <div class="card-body">
                       <h5 class="card-title">${data[i].clubName}</h5>
@@ -50,9 +51,9 @@ $(document).ready(function () {
                     </div>
                   </div>  
                 `
-
-                }
-            })
+                        $("#clubs").append(newCard)
+                    }
+                })
 
         }
     }
