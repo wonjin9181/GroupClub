@@ -15,7 +15,10 @@ $("#submit").on("click", function(){
 
     $.ajax({
         type: "POST",
-        url: "api/clubs"
+        url: "api/clubs",
+        data: newClub
+    }).then(function(data){
+        window.location.href = "/"
     })
 })
 
