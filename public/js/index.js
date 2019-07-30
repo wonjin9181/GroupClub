@@ -4,36 +4,43 @@ $(document).ready(function () {
 
     var clubList = $("#clubs")
 
-    getClubs()
+    // getClubs()
 
 
 
-    $("#search").on("click", function () {
+    $("#search").on("click", function (event) {
+        event.preventDefault();
+    
+        let value = $("#searchTerm").val().trim();
 
-        var name = $("#searchTerm").val().trim();
-
-        console.log(name)
-
-        getOneClub(name)
+        getClubs(value)
+        // getOneClub(name)
     })
 
 
 
-    function getOneClub(name) {
+    // function getOneClub(name) {
 
-        $.get("/api/clubs/:" + name, function (data) {
-            var rowsToAdd = [];
-            console.log(data)
-            for (var i = 0; i < data.length; i++) {
-                rowsToAdd.push(createClubRow(data[i]));
-            }
-            renderClubList(rowsToAdd);
-        })
-    }
 
-    function getClubs() {
-        $.get("/api/clubs", function (data) {
+    //     $.get("/api/clubs/" + name,function(data){
+    //         var rowsToAdd = [];
+         
+    //         console.log(data)
+    //         for (var i = 0; i < data.length; i++) {
+    //             rowsToAdd.push(createClubRow(data[i]));
+    //         }
+    //         renderClubList(rowsToAdd);
+    //     })
+    // }
+
+
+    function getClubs(value) {
+        let url = "/api/clubs";
+
+        url += "?search=" + value
+        $.get(url, function (data) {
             var rowsToAdd = [];
+            
             console.log(data)
             for (var i = 0; i < data.length; i++) {
                 rowsToAdd.push(createClubRow(data[i]));
@@ -56,18 +63,15 @@ $(document).ready(function () {
             </div>
           </div>  
         `
-        // newTr.append(newCard);
-        // newTr.append("<td><a href='/blog?club_id=" + clubData.id + "'>Go to Posts</a></td>");
-        // newTr.append("<td><a href='/cms?club_id=" + clubData.id + "'>Create a Post</a></td>");
-        // newTr.append("");
+    
         return newCard;
     }
 
     function renderClubList(rows) {
         clubList.children().not(":last").remove();
-        // clubContainer.children(".alert").remove();
+
         if (rows.length) {
-            console.log(rows);
+       
             clubList.prepend(rows);
         }
         else {
