@@ -7,9 +7,8 @@ $(document).ready(function () {
             type: "GET",
             url: "/api/clubs/" + id
         })
-            .then(function () {
-                location.reload();
-                console.log("Success")
+            .then(function (response) {
+                console.log(response)
             });
     });
 })

@@ -65,7 +65,9 @@ module.exports = function (app) {
     console.log("------------", req.params.id)
     db.Clubs.findOne({ where: { id: req.params.id } })
       .then(function (dbClubs) {
-        res.json(dbClubs);
+        console.log(dbClubs.dataValues)
+        let club = dbClubs.dataValues
+        res.json(club);
       });
 
   });
