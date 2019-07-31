@@ -25,21 +25,6 @@ module.exports = function (app) {
   });
 
 
-  // app.get("/api/clubs/:name", function (req, res) {
-  //   console.log("This: " + req.params.name)
-  //   db.Clubs.findAll({
-  //     where: {
-  //       clubName: req.params.name
-  //     }
-  //   })
-  //     .then(function (dbClubs) {
-  //       console.log(dbClubs)
-  //       res.json(dbClubs);
-  //     });
-  // });
-
-
-
   // Create a new example
   app.post("/api/clubs", function (req, res) {
     db.Clubs.create(req.body)
