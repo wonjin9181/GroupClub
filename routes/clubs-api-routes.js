@@ -7,10 +7,10 @@ module.exports = function (app) {
     var value = req.query.search
     var expression = {}
     console.log(value)
-    
-    if(value){
-      expression ={
-        where:{
+
+    if (value) {
+      expression = {
+        where: {
           clubName: value
         }
       }
@@ -37,12 +37,23 @@ module.exports = function (app) {
 
   // Delete an example by id
 
-  app.delete("/api/clubs/:id", function(req, res) {
-   console.log("------------", req.params.id)
+  app.delete("/api/clubs/:id", function (req, res) {
+    console.log("------------", req.params.id)
     db.Clubs.destroy({ where: { id: req.params.id } })
-    .then(function(dbClubs) {
-      res.json(dbClubs);
-    });
+      .then(function (dbClubs) {
+        res.json(dbClubs);
+      });
+
+  });
+
+  app.get("/api/clubs/:id", function (req, res) {
+    console.log("------------", req.params.id)
+    db.Clubs.findOne({ where: { id: req.params.id } })
+      .then(function (dbClubs) {
+        console.log(dbClubs.dataValues)
+        let club = dbClubs.dataValues
+        res.json(club);
+      });
 
   });
 };
