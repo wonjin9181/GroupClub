@@ -6,11 +6,10 @@ module.exports = function(app) {
 
   app.get("/api/posts/:id", function(req, res) {
 
-    db.Post.findOne({
+    db.Post.findAll({
       where: {
-        id: req.params.id
-      },
-      include: [db.Author]
+        clubId: req.params.id
+      },order: [["id", "DESC"]]
     }).then(function(dbPost) {
       res.json(dbPost);
     });
