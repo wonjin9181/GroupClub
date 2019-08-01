@@ -11,7 +11,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/makeClub.html"))
   });
 
-  app.get("/club/:id", function(req, res) {
+  app.get("/club", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/club.html"));
   });
 };
