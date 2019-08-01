@@ -15,8 +15,12 @@
   width: 100%;
 }
 
-.btn{
-margin-left: 200px;
+.jumbotron{
+  width:100%;
+}
+
+h1#clubName{
+  text-align: center;
 }
 
 h1{
@@ -29,10 +33,26 @@ h5{
   text-align: center;
 }
 
-/* club.html */
+.navDiv{
+  margin:auto;
+  width:1000px;
+  
+}
+#navbar-makeclub{
+ margin-left: 700px
+}
+
+
+#postCard{
+  margin-bottom:10px;
+}
+#navbar-index-makeclub{
+  margin-left:500px;
+}
 
 #clubName{
   text-align: left;
 }
+
 
 

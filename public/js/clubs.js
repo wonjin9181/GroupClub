@@ -4,12 +4,16 @@ console.log(clubData);
 $('#clubName').text(clubData.clubName);
 
 let clubInfo = `
-<ul style="list-style-type:none;" id="clubDiv" data-id=${clubData.id}>
-<li id="clubName">Club Name: ${clubData.clubName}</li>
-<li id="clubLeader">Leader: ${clubData.clubMaker}</li>
-<li id="clubLocation">Location:  ${clubData.clubLocation}</li>
-<li id="clubDescription">Club Description:  ${clubData.clubDescription}</li>
-</ul>
+<div style="list-style-type:none;" id="clubDiv" data-id=${clubData.id}>
+<div id="clubName"><h1>${clubData.clubName}</h1></div>
+<br><br>
+<div id="clubLeader">Leader:  ${clubData.clubMaker}</div>
+<br>
+<div id="clubLocation">Location:   ${clubData.clubLocation}</div>
+<br>
+<div id="clubDescription">Club Description:  ${clubData.clubDescription}</div>
+<br>
+</div>
 `
 
 $('#clubInfo').prepend(clubInfo);
