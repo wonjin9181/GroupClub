@@ -18,3 +18,9 @@ h1{
 h3{
   text-align: center;
 }
+
+/* club.html */
+
+#clubName{
+  text-align: left;
+}
