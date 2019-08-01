@@ -29,9 +29,6 @@ h1{
 h3{
   text-align: center;
 }
-/* h5{
-  text-align: center;
-} */
 
 .navDiv{
   margin:auto;
@@ -52,6 +49,27 @@ h3{
 
 #clubName{
   text-align: left;
+}
+
+
+/***** login css *****/
+
+.loginbox{
+  margin-top:30px;
+  width: 300px;
+  display: block;
+  margin:auto;
+}
+
+.card-img-top{
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin: auto;
+
+}
+.card-title{
+  text-align: center;
 }
 
 
