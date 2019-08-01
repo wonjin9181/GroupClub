@@ -43,8 +43,6 @@ $(document).ready(function () {
               <h5 class="card-title">${clubData.clubName}</h5>
               <p class="card-text">${clubData.clubDescription}</p>
 
-              <a href="" class="btn btn-info btn-sm">Club Page</a>
-
               <a href="/club.html" class="go-to-club btn btn-info btn-sm" data-id= ${clubData.id}>Club Page</a>
 
               <a href="#" class="delete-club btn btn-danger btn-sm" data-id= ${clubData.id}>Delete Club</a>
