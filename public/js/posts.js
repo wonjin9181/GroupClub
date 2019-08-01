@@ -59,8 +59,8 @@ $(document).ready(function () {
     $("#submitPost").on("click", function (event) {
         event.preventDefault();
 
-        let title = $("#title").val().trim();
-        let body = $("#description").val().trim();
+        let title = $("#title").val();
+        let body = $("#description").val();
         let clubId = $("#clubDiv").data("id")
         console.log(title);
         console.log(body)
