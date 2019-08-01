@@ -14,46 +14,87 @@
 </head>
 
 <body>
-    <div class="container" id="clubPage">
 
-        <a href="/index.html"><i class="fa fa-home" style="font-size:36px"></i></a>
-
-        <h1 id="clubName"></h1>
-
-        <div class="row mt-4">
-            <div class="col-md-8 col-sm-12">
-                <section>
-
-                    <textarea name="subject" resize="none" id="title" cols="80" rows="1" placeholder="Subject"></textarea>
-
-                    <textarea name="description" resize="none" id="description" cols="80" rows="10"
-                        placeholder="Compose post here.."></textarea>
-
-                    <button id="submitPost" type="button" class="btn btn-dark">Post</button>
+    <nav class="navbar navbar-light bg-light">
+        <div class="navDiv">
+            <a href="/index.html"><i class="fa fa-home" style="font-size:36px"></i></a>
+            <i class="fa fa-glide-g" aria-hidden="true"></i>roup Club </i></i>
+            <a href="./makeClub.html"><button class="btn btn-sm" id="navbar-makeclub"
+                    style="background-color:rgb(23,162,184); color:white"><span class="fa fa-plus" id="makeClub"></span>
+                    Make
+                    New Club</button></a>
+        </div>
 
 
-                </section>
+    </nav>
+    <br><br>
 
-                <br>
 
-                <section>
+    <div class="container">
+        <div class="container" id="clubPage">
 
-                    <div class="card" id="postList">
-                        
-                    </div>
 
-                </section>
+
+
+
+            <div class="row mt-4">
+                <div class="col-md-8">
+                    <section>
+
+                        <textarea name="subject" resize="none" id="title" cols="80" rows="1"
+                            placeholder="Subject"></textarea>
+
+                        <textarea name="description" resize="none" id="description" cols="80" rows="10"
+                            placeholder="Compose post here.."></textarea>
+
+                        <button id="submitPost" type="button" class="btn btn-dark">Post</button>
+
+
+
+                    </section>
+
+                    <br>
+
+                    <section>
+
+                        <div id="postList">
+
+                        </div>
+
+                    </section>
+                </div>
+
+
+                <div class="col-md-4">
+                    <section id="clubInfo">
+
+                    </section>
+
+                </div>
+
+
+
             </div>
 
-            <section class="section card" id="clubInfo">
-               
-            </section>
+
+
+
+
 
         </div>
 
+        <div class="row">
+            <div class="col-sm-12">
+                <h5 class="text-center sticky-bottom"><i class="fa fa-glide-g"></i><small>roup Club created by: Sarah,
+                        Won, & Surge</small></h5>
+            </div>
+        </div>
+    </div>
+
+
     </div>
     <script src="./js/clubs.js" type="text/javascript"></script>
-    <script src="./js/posts.js" type ="text/javascript"></script>
+    <script src="./js/posts.js" type="text/javascript"></script>
 
 </body>
 

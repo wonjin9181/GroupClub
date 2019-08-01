@@ -21,7 +21,7 @@ $(document).ready(function () {
     function createPostRow(postData) {
 
         var newCard = `
-            <div class="card w-100 p-3">
+            <div class="card w-100 p-3" id="postCard">
             <div class="card-body">
               <h5 class="card-title">${postData.title}</h5>
               <p class="card-text">${postData.body}</p>
