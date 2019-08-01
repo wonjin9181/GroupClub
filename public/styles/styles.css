@@ -30,9 +30,6 @@ h1{
 h3{
   text-align: center;
 }
-/* h5{
-  text-align: center;
-} */
 
 .navDiv{
   margin:auto;
@@ -57,6 +54,29 @@ h3{
 
 /* end club.html */
 
+
+/***** login css *****/
+
+.loginbox{
+  margin-top:30px;
+  width: 300px;
+  display: block;
+  margin:auto;
+}
+
+.card-img-top{
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin: auto;
+
+}
+.card-title{
+  text-align: center;
+}
+
+/*end login css*/
+
 .jumbotron {
   background-image: url("https://images.pexels.com/photos/1457685/pexels-photo-1457685.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
   
@@ -71,4 +91,5 @@ body{
   background-position-y: -400px;
   background-attachment: fixed;
 }
+
 
