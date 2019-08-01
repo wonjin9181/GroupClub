@@ -14,6 +14,7 @@ margin-left: 200px;
 
 h1{
   text-align: center;
+  color: blue;
 }
 h3{
   text-align: center;
@@ -23,4 +24,24 @@ h3{
 
 #clubName{
   text-align: left;
+}
+
+/* end club.html */
+
+.jumbotron{
+  
+}
+.jumbotron {
+  background-image: url("https://images.pexels.com/photos/1457685/pexels-photo-1457685.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  
+  /* https://images.pexels.com/photos/220201/pexels-photo-220201.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260 */
+  /* background-repeat: no-repeat; */
+  background-size: cover; 
+  background-position-y: -400px;
+}
+body{
+  background-image: url("https://images.pexels.com/photos/1624565/pexels-photo-1624565.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+
+  background-position-y: -400px;
+  background-attachment: fixed;
 }
