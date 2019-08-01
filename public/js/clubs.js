@@ -4,7 +4,7 @@ console.log(clubData);
 $('#clubName').text(clubData.clubName);
 
 let clubInfo = `
-<ul style="list-style-type:none;">
+<ul style="list-style-type:none;" id="clubDiv" data-id=${clubData.id}>
 <li id="clubName">Club Name: ${clubData.clubName}</li>
 <li id="clubLeader">Leader: ${clubData.clubMaker}</li>
 <li id="clubLocation">Location:  ${clubData.clubLocation}</li>

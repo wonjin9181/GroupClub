@@ -11,17 +11,12 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.TEXT,
       allowNull: false,
       len: [1]
+    },
+    clubId:{
+      type: DataTypes.STRING,
+      allowNull: false,
     }
   });
-
-  // Post.associate = function (models) {
-
-  //   Post.belongsTo(models.Clubs, {
-  //     foreignKey: {
-  //       allowNull: false
-  //     }
-  //   });
-  // };
 
   return Post;
 };
