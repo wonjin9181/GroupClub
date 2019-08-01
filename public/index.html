@@ -14,22 +14,27 @@
 </head>
 
 <body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="navDiv">
+      <a href="/index.html"><i class="fa fa-home" style="font-size:36px; color:rgb(23,162,184)"></i></a>
+      <i class="fa fa-glide-g" aria-hidden="true"></i>roup Club </i></i>
+      <a href="./makeClub.html"><button class="btn btn-sm" id="navbar-index-makeclub"
+          style="background-color:rgb(23,162,184); color:white"><span class="fa fa-plus" id="makeClub"></span> Make New
+          Club</button></a>
+              <input type="text" placeholder="Search..." name="search" id="searchTerm">
+        
+              <button type="submit" id="search"><i class="fa fa-search"></i></button>
+    </div>
+  </nav>
+  <br><br>
 
   <div class="container">
     <div class="jumbotron">
       <h1><i class="fa fa-glide-g" aria-hidden="true"></i>roup Club </i></i></h1>
       <h3>Find a club that you're interested in!</h3>
       <hr>
-      <a href="./makeClub.html"><button class="btn btn-info btn-sm"><span class="fa fa-plus" id="makeClub"></span> Make
-          New Club</button></a>
-      <div class="search">
-        <form>
 
-          <input type="text" placeholder="Search..." name="search" id="searchTerm">
 
-          <button type="submit" id="search"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
     </div>
 
     <div class="container" id="clubs">
