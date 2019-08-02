@@ -16,6 +16,7 @@ module.exports = function(app) {
         }
         db.Users.findAll(expression)
         .then(function(data){
+            console.log(data)
             res.json(data);
         })
     })
