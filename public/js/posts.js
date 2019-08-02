@@ -1,6 +1,7 @@
 $(document).ready(function () {
-
+    let username = localStorage.getItem('username')
     let postList = $("#postList")
+    console.log(username)
 
     getPost()
 
@@ -25,6 +26,8 @@ $(document).ready(function () {
             <div class="card-body">
               <h5 class="card-title">${postData.title}</h5>
               <p class="card-text">${postData.body}</p>
+              <p class="card-text">${postData.createdAt}</p>
+              <p class="card-text">${postData.username}</p>
               <a href="#" class="delete-post btn btn-danger btn-sm" data-id= ${postData.id}>Delete Post</a>
             </div>
           </div>  
@@ -65,11 +68,12 @@ $(document).ready(function () {
         console.log(title);
         console.log(body)
         console.log(clubId)
-
+        console.log("username"+ username)
         let post = {
             title,
             body,
-            clubId
+            clubId,
+            username
         }
 
         $.ajax({
