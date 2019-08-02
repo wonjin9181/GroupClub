@@ -1,6 +1,15 @@
-// require("dotenv").config();
+require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
+var keys = require("./keys.js");
+var mysql = require("mysql");
+var connection = mysql.createConnection({
+  host: "localhost",
+  port: 3306,
+  user: "root",
+  password: keys.permissions.database,
+  database: "clubmaker_db"
+});
 
 var db = require("./models");
 
