@@ -76,18 +76,20 @@ h3{
 
 /***********end login css********/
 
-/* .jumbotron {
-  background-image: url("https://images.pexels.com/photos/1457685/pexels-photo-1457685.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-  background-size: cover; 
-  background-position-y: -400px;
+/********* websocket************/
+
+/* * { font-family:tahoma; font-size:12px; padding:0px;margin:0px;} */
+p.web{ line-height:18px; }
+div.web { width:500px; margin-left:auto; margin-right:auto;
 }
-body{
-  background-image: url("https://images.pexels.com/photos/1624565/pexels-photo-1624565.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+#content { padding:5px; background:#ddd; border-radius:5px;
+    overflow-y: scroll; border:1px solid #CCC;
+    margin-top:10px; height: 160px; }
 
-  background-position-y: -400px;
-  background-attachment: fixed;
-} */
-
+#input { border-radius:2px; border:1px solid #ccc;
+    margin-top:10px; padding:5px; width:400px;
+}
+#status { width:88px;display:block;float:left;margin-top:15px; }
 
 
 
