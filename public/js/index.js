@@ -42,6 +42,7 @@ $(document).ready(function () {
             <div class="card-body">
               <h5 class="card-title">${clubData.clubName}</h5>
               <p class="card-text">${clubData.clubDescription}</p>
+              <p class="card-text" id="clubMaker" data-id="${clubData.clubMaker}">${clubData.clubMaker}</p>
 
               <a href="/club.html" class="go-to-club btn btn-info btn-sm" data-id= ${clubData.id}>Club Page</a>
 
