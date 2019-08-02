@@ -1,8 +1,10 @@
 surge....
 
 index page - 
-1. add picture
-2. move buttons
+1.
 
 club page - 
-1. change post button color to 'info' - btn btn-info
+done 1. change post button color to 'info' - btn btn-info
+
+main
+done 1. add button with link to index page 'logout'
