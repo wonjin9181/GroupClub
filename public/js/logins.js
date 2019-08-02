@@ -41,7 +41,8 @@ $(document).ready(function () {
                 })
                     .then(function (data) {
                         console.log(data)
-                        // alert("Your username is: " + data.username + "\nYour Password is: " + data.password)
+                        alert("Your username is: " + data.username + "\nYour Password is: " + data.password)
+                        localStorage.setItem('username', username)
                         window.location.pathname = "/main.html"
                     })
             }
@@ -67,6 +68,7 @@ $(document).ready(function () {
                 alert("Username or password does not exists")
             }
             else if (password === data[0].password) {
+                localStorage.setItem('username', username)
                 window.location.pathname = "/main.html"
             }
             

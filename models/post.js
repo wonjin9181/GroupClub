@@ -15,6 +15,10 @@ module.exports = function (sequelize, DataTypes) {
     clubId:{
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    username:{
+      type: DataTypes.STRING,
+      allowNull: false,
     }
   });
 
