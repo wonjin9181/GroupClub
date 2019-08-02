@@ -21,37 +21,52 @@
                     style="background-color:rgb(23,162,184); color:white"><span id="makeClub"></span>
                     View all Clubs</button></a>
         </div>
+        <br><br>
     </nav>
     <div class="jumbotron">
-        <h1><i class="fa fa-glide-g" aria-hidden="true"></i>roup Club </i></i></h1>
-        <h5>Start a new club</h5>
+        <h1 style="text-align: center">Start a new club!</h1>
     </div>
 
     <div class=container>
-        <form>
-            <div class="form-group">
-                <label for="clubName">Club Name</label>
-                <input type="input" class="form-control" id="clubName" placeholder="Enter club name...">
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="clubName">Club Name</label>
+                        <input type="input" class="form-control" id="clubName" placeholder="Enter club name...">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clubLocation">Club Location</label>
+                        <input type="input" class="form-control" id="clubLocation" placeholder="Enter club location...">
+                    </div>
+                    <div class="form-group">
+                        <label for="clubDescription">Club Description</label>
+
+                        <textarea class="form-control" id="clubDescription" rows="5"
+                            placeholder="Tell us about this club..."></textarea>
+                            <br>
+                            <button type="submit" id="submit" class="btn btn-info">Create Club</button>
+                    </div>
+                </form>
             </div>
-
-            <div class="form-group">
-                <label for="clubLocation">Club Location</label>
-                <input type="input" class="form-control" id="clubLocation" placeholder="Enter club location...">
+                <div class="col-md-6">
+                    
+                    <div class="card" style="width: 22rem; margin-left:80px">
+                        <img src="./img/back-view-beach-best-friends-2647973.jpg" style= "width: 100%; height: 300px" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Create a new club to find & meet new people interested in the same things you are.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="clubDescription">Club Description</label>
-
-                <textarea class="form-control" id="clubDescription" rows="5"
-                    placeholder="Tell us about this club..."></textarea>
-            </div>
-
-            <button type="submit" id="submit" class="btn btn-info">Create Club</button>
-
-
+        </div>
+    </div>
             <div class="row">
                 <div class="col-sm-12">
                     <hr>
-                    <h5 class="text-center sticky-bottom"><i class="fa fa-glide-g"></i><small>roup Club created by:
+                    <h5 class="text-center sticky-bottom"><i class="fa fa-glide-g"></i><small>roup Club
+                            created by:
                             Sarah, Won, &
                             Surge
                         </small></h5>
@@ -59,9 +74,9 @@
                 </div>
             </div>
 
-        </form>
-    </div>
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="js/makeClub.js"></script>
+
+        
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="js/makeClub.js"></script>
 </body>
