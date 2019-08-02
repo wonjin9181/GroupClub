@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "qpemfh91",
+    "password": "",
     "database": "clubmaker_db",
     "host": "localhost",
     "dialect": "mysql"
