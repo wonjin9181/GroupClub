@@ -1,9 +1,12 @@
 var path = require("path");
 
 module.exports = function(app) {
-  // Load index page
   app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
+  });
+  // Load index page
+  app.get("/main.html", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/main.html"));
   });
 
   // Load example page and pass in an example by id

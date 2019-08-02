@@ -24,7 +24,8 @@ app.set("view engine", "handlebars");
 // Routes
 require("./routes/post-api-routes")(app);
 require("./routes/htmlRoutes")(app);
-require("./routes/clubs-api-routes")(app)
+require("./routes/clubs-api-routes")(app);
+require("./routes/login-api-routes")(app);
 
 var syncOptions = { force: false };
 
