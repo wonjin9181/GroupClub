@@ -63,10 +63,13 @@ $(document).ready(function () {
         $.get(url, function (data) {
             console.log(data)
 
-            
-            if (password === data[0].password) {
+            if(data.length === 0){
+                alert("Username or password does not exists")
+            }
+            else if (password === data[0].password) {
                 window.location.pathname = "/main.html"
             }
+            
             else{
                 alert("Username or password does not exists")
             }
