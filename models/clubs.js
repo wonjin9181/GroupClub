@@ -25,8 +25,15 @@ module.exports = function (sequelize, DataTypes) {
     clubLocation: {
       type: DataTypes.STRING,
       allowNull: true
-    }
+    },
+    password:{
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+  
+
   });
+
 
   Clubs.associate = function (models) {
     Clubs.hasMany(models.Post, {
