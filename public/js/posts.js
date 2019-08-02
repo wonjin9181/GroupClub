@@ -27,7 +27,7 @@ $(document).ready(function () {
               <h5 class="card-title">${postData.title}</h5>
               <p class="card-text">${postData.body}</p>
               <p class="card-text">${postData.createdAt}</p>
-              <p class="card-text">${postData.username}</p>
+              <p class="card-text"  id="postMaker" data-id="${postData.username}">${postData.username}</p>
               <a href="#" class="delete-post btn btn-danger btn-sm" data-id= ${postData.id}>Delete Post</a>
             </div>
           </div>  
@@ -44,7 +44,10 @@ $(document).ready(function () {
 
     $("#postList").on("click", ".delete-post", function () {
         let id = $(this).data('id');
+        let username = localStorage.getItem('username')
+        console.log($("#postMaker").data('id'))
 
+        if ($("#postMaker").data('id') === username) {
         $.ajax({
             type: "DELETE",
             url: "/api/posts/" + id
@@ -53,6 +56,10 @@ $(document).ready(function () {
                 location.reload();
                 console.log("Success")
             });
+        }
+        else{
+            alert("You are not authorized")
+        }
     })
 
 
