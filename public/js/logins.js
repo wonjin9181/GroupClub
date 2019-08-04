@@ -4,14 +4,9 @@ $(document).ready(function () {
 
     $("#createID").on("click", function (event) {
         event.preventDefault();
-
-
-
         let username = $("#username").val()
         let password = $("#password").val()
         let userList = []
-
-
         console.log(username, password)
 
         $.get("/api/users", function (data) {

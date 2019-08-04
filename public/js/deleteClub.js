@@ -1,7 +1,11 @@
 $(document).ready(function () {
     $("#clubs").on("click", ".delete-club", function () {
         let username = localStorage.getItem('username')
+        console.log(username)
+
         let id = $(this).attr("data-id")
+        
+        console.log($("#clubMaker").data('id'))
       
 
         if ($("#clubMaker").data('id') === username) {

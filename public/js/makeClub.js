@@ -9,14 +9,9 @@ $(document).ready(function () {
         var clubLocation = $("#clubLocation").val().trim();
         var clubDescription = $("#clubDescription").val().trim();
 
-
-
-
         $.get("/api/users/" + maker, function (data) {
             console.log(data[0].password)
             password = data[0].password
-
-
 
             var newClub = {
                 clubName,
@@ -25,10 +20,7 @@ $(document).ready(function () {
                 clubDescription,
                 password
             }
-
             console.log(newClub)
-
-
             $.ajax({
                 type: "POST",
                 url: "/api/clubs",

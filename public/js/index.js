@@ -1,7 +1,4 @@
 $(document).ready(function () {
-
-
-
     var clubList = $("#clubs")
 
     let value = $("#searchTerm").val().trim();
@@ -17,11 +14,8 @@ $(document).ready(function () {
 
     })
 
-
-
     function getClubs(value) {
         let url = "/api/clubs";
-
         url += "?search=" + value
         $.get(url, function (data) {
             var rowsToAdd = [];
@@ -36,36 +30,27 @@ $(document).ready(function () {
     }
 
     function createClubRow(clubData) {
-
         var newCard = `
             <div class="card w-100 p-3">
             <div class="card-body">
               <h5 class="card-title">${clubData.clubName}</h5>
               <p class="card-text">${clubData.clubDescription}</p>
               <p class="card-text" id="clubMaker" data-id="${clubData.clubMaker}">${clubData.clubMaker}</p>
-
               <a href="/club.html" class="go-to-club btn btn-info btn-sm" data-id= ${clubData.id}>Club Page</a>
-
               <a href="#" class="delete-club btn btn-danger btn-sm" data-id= ${clubData.id}>Delete Club</a>
             </div>
           </div>  
         `
-
         return newCard;
     }
 
     function renderClubList(rows) {
         clubList.children().remove();
-
         if (rows.length) {
-
             clubList.prepend(rows);
         }
         else {
             renderEmpty();
         }
     }
-
-    
-
 });
