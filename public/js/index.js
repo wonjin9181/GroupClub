@@ -57,13 +57,9 @@ $(document).ready(function () {
     function renderClubList(rows) {
         clubList.children().remove();
 
-        if (rows.length) {
-
-            clubList.prepend(rows);
-        }
-        else {
-            renderEmpty();
-        }
+      clubList.prepend(rows);
+        
+        
     }
 
     
