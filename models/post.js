@@ -12,10 +12,10 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false,
       len: [1]
     },
-    clubId:{
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    // clubId:{
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    // },
     username:{
       type: DataTypes.STRING,
       allowNull: false,
