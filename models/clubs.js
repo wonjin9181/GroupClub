@@ -35,11 +35,5 @@ module.exports = function (sequelize, DataTypes) {
   });
 
 
-  Clubs.associate = function (models) {
-    Clubs.hasMany(models.Post, {
-      onDelete: "cascade"
-    });
-  }
-
   return Clubs;
 };
