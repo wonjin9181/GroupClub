@@ -14,7 +14,7 @@ var connection = mysql.createConnection({
 var db = require("./models");
 
 var app = express();
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8000;
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
